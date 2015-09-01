@@ -12,7 +12,7 @@ Gulp plugin to join AngularJS templates in one JavaScript template cache
 Install with [npm](https://npmjs.org/package/gulp-templatecache)
 
 
-`npm install --save-dev gulp-templatecache`
+`npm install "git://github.com/EndyKaufman/gulp-templatecache.git#master" --save-dev`
 
 ## Usage
 
