@@ -47,6 +47,7 @@ function transformTemplates(templates, strip, prepend, minify) {
 }
 
 function transformTemplateEntry(entry, strip, prepend, minify) {
+	
 	var path = entry.path,
 		content = entry.content,
 		parseError;
@@ -74,7 +75,7 @@ function transformTemplateEntry(entry, strip, prepend, minify) {
 
 	content = escapeHtmlContent(content);
 
-	return 'a.put(\'' + path + '\', \'' + content + '\');\n\t';
+	return 'a.put(\'' + path.replace(/\\/g, '/') + '\', \'' + content + '\');\n\t';
 }
 
 module.exports = function(options) {
